@@ -1,5 +1,5 @@
 
-package com;
+package com.log;
 
 import java.net.Inet4Address;
 import java.net.InetAddress;

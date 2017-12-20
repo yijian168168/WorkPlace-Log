@@ -1,4 +1,4 @@
-package com;
+package com.log;
 
 import org.apache.log4j.helpers.FormattingInfo;
 import org.apache.log4j.helpers.PatternConverter;
