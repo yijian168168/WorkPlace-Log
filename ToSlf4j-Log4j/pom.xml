@@ -30,13 +30,6 @@
             <version>2.10.0</version>
         </dependency>
 
-        <!--log4j over slf4j 桥-->
-        <!--<dependency>-->
-            <!--<groupId>org.slf4j</groupId>-->
-            <!--<artifactId>log4j-over-slf4j</artifactId>-->
-            <!--<version>1.7.5</version>-->
-        <!--</dependency>-->
-
         <!--JDK logging to slf4j 桥-->
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -50,8 +43,6 @@
             <artifactId>jcl-over-slf4j</artifactId>
             <version>1.7.5</version>
         </dependency>
-
-        <!--log4j2 over slf4j 桥-->
     </dependencies>
 
 </project>
