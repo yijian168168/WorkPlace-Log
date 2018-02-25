@@ -6,7 +6,7 @@
     <!-- ==================== 控制台输出 ===================== -->
     <appender name="stdout" class="org.apache.log4j.ConsoleAppender">
         <layout class="com.log.CustomPatternLayout">
-            <param name="ConversionPattern" value="%#{ip} %-5p %d{yyyy-MM-dd HH:mm:ss,SSS} [%t] %c - %m%n"/>
+            <param name="ConversionPattern" value="[%X{appName},%X{logId}] %#{ip} %-5p %d{yyyy-MM-dd HH:mm:ss,SSS} [%t] %c - %m%n"/>
         </layout>
         <filter class="org.apache.log4j.varia.LevelRangeFilter">
             <param name="LevelMin" value="DEBUG"/>

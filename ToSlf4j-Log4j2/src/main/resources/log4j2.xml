@@ -8,15 +8,15 @@
         </Console>
 
         <!--按时间归档日志-->
-        <RollingFile name="appender1" fileName="E:/appLogs/log4j2/appender1.log"
+        <!--<RollingFile name="appender1" fileName="E:/appLogs/log4j2/appender1.log"
                      filePattern="E:/appLogs/log4j2/appender1-%d{yyyyMMdd}-%i.log"
                      ignoreExceptions="false">
             <PatternLayout pattern="%highlight{[%-5p][%sn][%d][%-8t](%F:%L)[%m]} %n"/>
             <Policies>
-                <!--按时间归档日志，每一小时归档一次-->
+                &lt;!&ndash;按时间归档日志，每一小时归档一次&ndash;&gt;
                 <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
             </Policies>
-        </RollingFile>
+        </RollingFile>-->
 
         <!--按文件大小归档日志-->
         <!--<RollingFile name="appender2" fileName="E:/data/appLogs/log4j2/appender2.log"
@@ -33,17 +33,17 @@
 
         <!--按时间和文件大小双重规则归档日志-->
         <!--可以写成压缩包的形式 例如：logs/app-%d{MM-dd-yyyy}.log.gz-->
-        <!--<RollingFile name="appender3" fileName="E:/data/appLogs/log4j2/appender3.log"
-                     filePattern="E:/data/appLogs/log4j2/appender3-%d{yyyyMMdd}-%i.log"
+        <RollingFile name="appender3" fileName="E:/data/appLogs/log4j2/appender3.log"
+                     filePattern="E:/data/appLogs/log4j2/appender3-%d{yyyyMMddHH}-%i.log"
                      ignoreExceptions="false">
             <PatternLayout pattern="%highlight{[%-5p][%d][%-8t](%F:%L)[%m]} %n"/>
             <Policies>
-                &lt;!&ndash;按时间归档日志，每一小时归档一次&ndash;&gt;
+                <!--按时间归档日志，每一小时归档一次-->
                 <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
-                &lt;!&ndash;按日志文件大小归档日志，达到指定大小即归档日志&ndash;&gt;
+                <!--按日志文件大小归档日志，达到指定大小即归档日志-->
                 <SizeBasedTriggeringPolicy size="2 MB"/>
             </Policies>
-        </RollingFile>-->
+        </RollingFile>
     </Appenders>
 
     <Loggers>
@@ -53,9 +53,9 @@
         <Root level="info">
             <!-- 输出设置 -->
             <AppenderRef ref="stdout"/>
-            <AppenderRef ref="appender1"/>
+            <!--<AppenderRef ref="appender1"/>-->
             <!--<AppenderRef ref="appender2"/>-->
-            <!--<AppenderRef ref="appender3"/>-->
+            <AppenderRef ref="appender3"/>
         </Root>
     </Loggers>
 </Configuration> 
